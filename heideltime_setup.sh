@@ -23,5 +23,8 @@ rm *.gz
 cd ..
 wget https://github.com/HeidelTime/heideltime/releases/download/VERSION2.2.1/heideltime-standalone-2.2.1.tar.gz
 tar xvfz heideltime-standalone-2.2.1.tar.gz
-echo "treeTaggerHome=/root/treetagger" >> heideltime-standalone/config.props
 rm *.gz
+python3 -m pip install -r requirements.txt
+mv heideltime heideltime_kit
+mv heideltime-standalone HeidelTime
+cp __init__.py HeidelTime/__init__.py
