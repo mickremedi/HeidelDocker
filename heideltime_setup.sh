@@ -34,12 +34,12 @@ mv treetagger .build
 wget https://github.com/HeidelTime/heideltime/releases/download/VERSION2.2.1/heideltime-standalone-2.2.1.tar.gz
 tar xvfz heideltime-standalone-2.2.1.tar.gz
 mv heideltime-standalone HeidelTime
-mv __init__.py HeidelTime
-rm *.gz
 
 # Python3 Setup
 python3 -m pip install -r requirements.txt
+mv __init__.py HeidelTime
 
 # Final Adjustments
+rm *.gz
 mv .wget-hsts .build
 mv heideltime_setup.sh .build
